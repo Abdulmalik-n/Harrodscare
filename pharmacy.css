@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Container */
+.container {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+/* Header */
+header {
+    background-color: #55bdee;
+    width: 100%;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+
+}
+
+header .logo img {
+    width: 100px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    padding-left: 60px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+/* Social Icons */
+.icons img {
+    width: 25px;
+    margin-left: 20px;
+}
+
+/* Main Section */
+main {
+    padding: 20px;
+}
+
+.title {
+    text-align: center;
+    text-shadow: #333;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+/* Pharmacy List */
+.pharmacy-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.medicine-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #BEE2E2;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.medicine-item img {
+    width: 150px;
+    height: auto;
+}
+
+.medicine-details {
+    flex: 1;
+    margin-left: -140px;
+    text-align: center;
+}
+
+.medicine-details h2 {
+    margin-bottom: 10px;
+}
+
+.medicine-details p {
+    margin-bottom: 10px;
+    text-align: right;
+}
+
+/* Buttons */
+button.cart, button.buy {
+    padding: 10px 20px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    margin-top: 20px;
+    position: relative;
+}
+
+button.cart {
+    background-color: #f0ad4e;
+    color: white;
+}
+
+button.cart::after, button.buy::after {
+    content: " ";
+    position: absolute;
+    bottom: -5px;
+    height: 4px;
+    width: 100%;
+    left: 0;
+    transition: 0.3s;
+    transition-timing-function: ease-in-out;
+    transform: scale(0);
+}
+
+button.cart:hover::after {
+    background-color: #5cb85c;
+    transform: scale(1);
+}
+
+button.buy {
+    background-color: #5cb85c;
+    color: white;
+}
+
+button.buy:hover::after {
+    background-color: #5cb85c;
+    transform: scale(1);
+}
+
+/* Footer Styles */
+footer {
+    background-color: #55bdee;
+    padding: 20px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-container a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-container img {
+    width: 30px;
+    height: auto;
+}
+
+.footer-container span {
+    color: white;
+    margin-left: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    /* Header */
+   .container {
+    flex-direction: column;
+    align-items: flex-start;
+    }
+
+    .container nav ul {
+        flex-direction: column;
+        gap: 10px;
+        padding-left: 0;
+    }
+
+    .logo img {
+        width: 80px;
+    }
+
+    .title {
+        font-size: 24px;
+    }
+
+    /* Medicine List Responsiveness */
+    .medicine-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .medicine-details {
+        margin-left: 0;
+    }
+
+    .medicine-item img {
+        width: 100px;
+        margin-bottom: 10px;
+    }
+
+    /* Button adjustments */
+    button.cart, button.buy {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    footer .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Additional adjustments for small screens */
+    body {
+        font-size: 14px;
+    }
+
+    nav ul {
+        gap: 5px;
+    }
+    .title {
+        font-size: 20px;
+    }
+
+    .medicine-item img {
+        width: 80px;
+    }
+
+    button.cart, button.buy {
+        padding: 8px 16px;
+    }
+
+    footer .footer-container img {
+        width: 25px;
+    }
+}
